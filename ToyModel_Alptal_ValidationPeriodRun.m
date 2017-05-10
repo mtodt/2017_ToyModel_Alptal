@@ -71,13 +71,13 @@ dt_SP = dt*24;          % for Alptal Precipitation in mm/hour and timestep 1 hou
 % forcing
 SW_in_open = Data(:,2);       % downward shortwave radiation on the open meadow [W m^{-2}]
 LW_in_open = Data(:,5);       % downward longwave radiation on the open meadow [W m^{-2}]
-T_air_ac = Data(:,8);         % air temperature above the forest canopy [°C]
+T_air_ac = Data(:,8);         % air temperature above the forest canopy [Â°C]
     T_air_ac = T_air_ac + 273.15;
 Wind_ac = Data(:,9);          % wind speed above the forest canopy [m s^{-1}]
 RelHum_open = Data(:,4);      % relative humidity on the open meadow [%]
 Prec = Data(:,6);             % precipitation, not divided into rain and snow [mm h^{-1}]
     Prec = Prec/3600;         % [mm s^{-1}] required, [mm h^{-1}] measured
-load GWL_Proxies_Alptal.mat
+load GWL_Proxy_Alptal.mat
     Proxy_GWL = factor_GWL_0304;
 z_snow_open = Data(:,7);      % snow depth on the open meadow [cm]
     z_snow_open = z_snow_open/100;
